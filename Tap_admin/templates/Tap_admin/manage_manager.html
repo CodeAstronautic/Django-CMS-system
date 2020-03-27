@@ -1,0 +1,53 @@
+{% extends 'Tap_admin/base.html' %}
+{% load static %}
+{% block content %}
+<section id="main-content">
+    <section class="wrapper">
+        
+      <div class="row">
+        <h2><center></center></h2>
+  
+            <table class="table table-striped">
+              <thead style="color: black;">
+                <tr style="background-color:#4ECDC4;">
+                  <th scope="col">Manager Name</th>
+                  <th scope="col">Manager Email</th>
+                  <th scope="col">Phone No.</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Assigned Project</th>
+                   <th scope="col">Edit</th>
+                   <th scope="col">Delete</th>
+                       
+                </tr>   
+                {% for obj in manager %}
+              </thead>
+              <tbody style="color: blue;">
+                <tr>
+                  <th scope="row">{{ obj.user.first_name|title }} {{ obj.user.last_name|title }}</th>
+                  <th scope="row">{{ obj.user.email }} </th>
+                  <th scope="row">{{ obj.phone_no }} </th>
+                  <th scope="row">{{ obj.address }} </th>
+                  <th scope="row">
+                    {% for i in project %}
+                    {% if i.manager.id == obj.id %}  
+                    <a href="{% url 'details' i.id %}">{{ i.project_name }} </a>
+
+                    {% endif %}
+                    {% endfor %}
+                </th>
+                
+                <th scope="row"><a href="#" class="btn btn-primary a-btn-slide-text">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                               
+                </a>
+            </th>
+               <th> <a href="{% url 'delete_manager' obj.id %}" class="btn btn-primary a-btn-slide-text">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                      </a>
+            </th>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+{% endblock %}

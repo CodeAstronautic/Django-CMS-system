@@ -1,0 +1,41 @@
+{% extends 'manager1/base.html' %}
+{% load static %}
+{% block content %}
+{% include 'manager1/heading.html' %}
+
+
+<section id="main-content">
+    <section class="wrapper">
+<div class="container">
+    <div class="row" >
+        <div class="col-lg-12" >
+          <table class="table table-hover">
+            <tr>
+            <td style="font-size: 2rem; color: blue;"> <strong>Project Name:</strong> <td>  <td style="font-size: 2rem; color: blue;">{{ data.project_name }}</td>
+            </tr>
+            <tr>
+                <td style="font-size: 2rem; color: blue;"><strong>Project Type:</strong> <td>  <td style="font-size: 2rem; color: blue;">{{data.project_type}}</td></tr>                      
+    <tr><td style="font-size: 2rem; color: blue;"><strong>Address:</strong> <td>  <td style="font-size: 2rem; color: blue;">{{data.address}}</td></tr>
+     </td> <br>                   
+    
+    <tr><td style="font-size: 2rem; color: blue;"><strong>Square Feet:</strong> <td>  <td style="font-size: 2rem; color: blue;">{{data.sqfeet}}</td></tr>
+                       </td>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  </body>
+                  </html>
+                  
+          
+                </thead>
+    
+    
+            <section id="main-content">
+                <section class="wrapper">
+                  <div class="row" >
+                        <tr>
+                                
+                        </div>     
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'manager1/base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="main-content">
+    <section class="wrapper">
+      <h2><center>Assigned Project</center></h2>
+      <br>
+      <div class="row">
+        <div class="offset-md-1"></div>
+<center>
+        {% if projects == 'No project Assigned' %}
+        No Projects Assigned to you
+
+        {% else %}
+      </center>
+
+        <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr style="background-color:#4ECDC4;">
+              
+                <th scope="col">Project Type</th>
+                <th scope="col">Project Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Sqfeet</th>
+                <th scope="col">Details</th>
+                
+               
+              </tr>
+            </thead>
+            <tbody>
+              
+             
+              
+                {% for obj in projects %}
+              <tr>
+                <th scope="row">{{ obj.project_type }}</th>
+                <td>{{ obj.project_name }}</td>
+                <td>{{ obj.address }}</td>
+                <td>{{ obj.sqfeet }}</td>
+                <td><a href="{% url 'man_details' obj.pk %}"> View Details</a></td>
+               
+                
+              </tr>
+
+              {% endfor %}
+              {% endif %}
+            </tbody>
+            </table>
+
+                
+
+{% endblock %}

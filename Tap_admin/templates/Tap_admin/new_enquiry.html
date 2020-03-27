@@ -1,0 +1,51 @@
+{% extends 'Tap_admin/base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="main-content">
+    <section class="wrapper">
+        
+      <div class="row">
+          <div class="offset-md-1">
+        <h2><center>New Enquiry Data</center></h2>
+  
+            <table class="table table-striped">
+              <thead>
+                <tr style="background-color:#4ECDC4;">
+                    <th scope="col">Enquiry Date</th>
+                  
+                    <th scope="col">Project Name</th>
+                    <th scope="col">Project Address</th>
+                    
+                    
+                    <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Phone no</th>
+                  <th scope="col">Address</th>
+                  
+                    </tr>
+                {% for obj in pro %}
+              </thead>
+              <tbody>
+                <tr>
+                    <td>{{ obj.enquiry_date}} </td>
+               
+                    <td><a href="{% url 'details' obj.pk %}">{{ obj.project.project_name}} </a> </td>
+                    <td>{{ obj.project.address}} </td>
+              
+    
+                    <th scope="row">{{ obj.first_name }}</th>
+                  <td>{{ obj.last_name }}</td>
+                  <td>{{ obj.email }}</td>
+                  <td>{{ obj.phone_no }}</td>
+                  
+                <td>{{ obj.addres}} </td>
+                 
+
+                 </tr
+                {% endfor %}
+            </tbody>
+            </table>
+        </center>
+{% endblock %}

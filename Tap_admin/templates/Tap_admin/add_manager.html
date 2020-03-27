@@ -1,0 +1,139 @@
+{% extends 'Tap_admin/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  label{
+    color:gray;
+  }
+  </style>
+<br><br><br>
+<form method="post" action="{% url 'add_manager' %}" onsubmit="return(validate());">
+    {% csrf_token %}
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <style type="text/css">
+          body{
+            background-color: #f1f1f1;
+          }
+          .register-form{
+            margin: 50px auto;
+            padding: 25px 20px;
+            background: #4ECDC4;
+            box-shadow: 2px 2px 4px #4ECDC4;
+            border-radius: 5px;
+            color: rgb(10, 10, 10);
+          }
+          .register-form h2{
+            margin-top: 0px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-radius: 10px;
+            border: 1px solid #020007;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2">
+              <div class="register-form">
+                <form action="" method="post">
+                  <h2 class="text-center">Manager Register</h2>
+                  <p class="hint-text">Create Manager account.</p>
+                  <div class="row">
+
+
+                    <div class="col-md-6 col-xs-12">
+                      <div class="form-group">
+                        <input type="text" name="Firstname" class="form-control" placeholder="First Name" required="required">
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                      <div class="form-group">
+                        <input type="text" name="lastname" class="form-control" placeholder="Last Name" required="required">
+                      </div> 
+                    </div>     
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="emailid" class="form-control" placeholder="Email" required="required">
+                  </div>
+                  
+                  <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required="required">
+                  </div>
+                  <div class="form-group">
+                    <input type="number" name="mobileno" class="form-control" placeholder="Phone no" required="required">
+                  </div>
+                  
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gen" id="exampleRadios1" value="Female" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+    Female
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="gen" id="exampleRadios2" value="Male">
+  <label class="form-check-label" for="exampleRadios2">
+  Male
+  </label>
+</div>            
+                   <div class="form-group">
+                    <input type="text" name="address" class="form-control" placeholder="Address" required="required">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="City" class="form-control" placeholder="city" required="required">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="State" class="form-control" placeholder="state" required="required">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="Country" class="form-control" placeholder="country" required="required">
+                  </div>
+                  
+                  <div class="form-group">
+                    <input type="number" name="pincode" class="form-control" placeholder="pincode" required="required">
+                  </div>
+
+                  <div class="form-group">
+                      <input type="text" name="Course" class="form-control" placeholder="High_degree" required="required">
+                    
+                  </div>
+                  
+                  
+                  <div class="form-group">
+                    <input type="date" name="dob" class="form-control" placeholder="DOB" required="required">
+                  </div>
+                        
+                  <div class="form-group">
+                    <label class="checkbox-inline">
+                      <input type="checkbox" required="required"> You agree to the <a href="#">Terms</a> & <a href="#">Conditions</a>.
+                    </label>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                      <div class="form-group">
+                        <input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7">
+                      </div>
+                    </div>
+                    
+                    </div>
+                  </div>
+                  {{message}}
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      </body>
+    </html>
+
+{% endblock %}

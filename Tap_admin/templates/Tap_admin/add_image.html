@@ -1,0 +1,43 @@
+{% extends 'Tap_admin/base.html' %}
+{% load static %}
+{% block content %}
+{% include 'Tap_admin/heading.html' %}
+
+{% load crispy_forms_tags %}
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form|crispy}}
+    <br>
+    <input type="submit" value="submit">
+</form>
+<hr>
+<div class="row">
+    
+{% if images %}
+<div class="col-md-4">
+<div class="card">
+    <img src="{{images.image1.url}}" class="card-img-top" height="200px" width="200px">
+    <div class="card-body">
+        <a href="#">Delete</a>
+    </div>
+</div>
+<div class="card">
+    <img src="{{images.image2.url}}" class="card-img-top" height="200px" width="200px">
+    <div class="card-body">
+        <a href="#">Delete</a>
+    </div>
+</div>
+<div class="card">
+    <img src="{{images.image3.url}}" class="card-img-top" height="200px" width="200px">
+    <div class="card-body">
+        <a href='#'>Delete</a>
+    </div>
+</div>
+{% endif %}
+</div>
+</div>
+</div>
+
+
+{% endblock %}

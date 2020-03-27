@@ -1,0 +1,149 @@
+/* Get Quote area css
+============================================================================================ */
+.get_quote_area{
+    background: #1e2126;
+    padding: 25px 0px;
+    .pull-left{
+        h4{
+            font-size: 22px;
+            font-family: $open;
+            color: #fff;
+            font-weight: 600;
+            padding-top: 17px;
+        }
+    }
+    .pull-right{
+        
+    }
+    &.yellow_get_quote{
+        background: $baseColor;
+        .pull-left{
+            h4{
+                color: $pfont;
+            }
+        }
+    }
+    &.project_contact{
+        background: $baseColor;
+        .pull-left{
+            h3{
+                font-size: 35px;
+                font-family: $open;
+                font-weight: bold;
+                color: $dip;
+            }
+            h4{
+                font-size: 25px;
+                font-family: $open;
+                color: $pfont;
+                font-weight: 400;
+                padding-top: 2px;
+            }
+        }
+        .pull-right{
+            .get_btn_black{
+                line-height: 43px;
+                margin-top: 13px;
+            }
+        }
+    }
+}
+/* End Get Quote area css
+============================================================================================ */
+
+/* End Get Quote area css
+============================================================================================ */
+.mapBox{
+    min-height: 470px;
+}
+/* End Get Quote area css
+============================================================================================ */
+
+/* Address area css
+============================================================================================ */
+.address_area{
+    background: $baseColor;
+    padding: 32px 0px;
+}
+.address_inner{
+    .media{
+        .media-left{
+            padding-right: 25px;
+        }
+        .media-body{
+            vertical-align: middle;
+            h4{
+                font-size: 22px;
+                font-family: $open;
+                font-weight: 600;
+                color: $pfont;
+            }
+            h5{
+                font-size: 18px;
+                font-family: $open;
+                font-weight: 600;
+                color: $pfont;
+                padding-top: 7px;
+            }
+        }
+    }
+}
+/* End Address area css
+============================================================================================ */
+
+/* Subscribe area css
+============================================================================================ */
+.subscribe_area{
+    background: $baseColor;
+    overflow: hidden;
+    padding: 40px 0px;
+    .pull-left{
+        h4{
+            font-size: 22px;
+            font-weight: normal;
+            font-family: $open;
+            color: $pfont;
+            padding-top: 12px;
+        }
+    }
+    .pull-right{
+        .input-group{
+            max-width: 350px;
+            input{
+                border: none;
+                height: 50px;
+                background: #f3f3f3;
+                border-radius: 0px;
+                box-shadow: none;
+                font-size: 18px;
+                font-weight: normal;
+                color: #bcbcbc;
+                font-family: $open;
+                @include placeholder{
+                    font-size: 18px;
+                    font-weight: normal;
+                    color: #bcbcbc;
+                    font-family: $open;
+                }
+            }
+            .input-group-btn{
+                .btn-default{
+                    margin-left: 0px;
+                    padding: 0px;
+                    height: 50px;
+                    border: none;
+                    border-radius: 0px;
+                    background: #1e2126;
+                    color: #fff;
+                    width: 95px;
+                    text-align: center;
+                    font-size: 22px;
+                    outline: none !important;
+                    box-shadow: none !important;
+                }
+            }    
+        }
+    }
+}
+/* End Subscribe area css
+============================================================================================ */

@@ -1,0 +1,28 @@
+{% extends 'manager1/base.html' %}
+
+{% block content %}
+{% include 'manager1/heading.html' %}
+{% load crispy_forms_tags %}
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        console.log('hello');
+        //$('#id_material_type').attr("disabled", true); 
+      $('#id_quantity').prop("readonly", true);
+      $('#id_cost').prop("readonly", true);
+        var cmp_name=$("#id_company_name").val();
+      if (cmp_name!=''){
+          $('#submit').hide();
+      }
+    }); 
+  </script>
+
+<form method="POST" onload="onLoadBody()">
+    {% csrf_token %}
+    {{form|crispy}}
+<input type="submit" id="submit">
+</form>
+
+{% endblock %}

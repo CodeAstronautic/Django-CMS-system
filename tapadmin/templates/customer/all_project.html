@@ -1,0 +1,64 @@
+{% extends 'customer/base.html' %}
+{% load static %}
+{% block content %}
+        <!--================Banner Area =================-->
+        <section class="banner_area">
+            <div class="container">
+                <div class="banner_inner_text">
+                    <h4>Project full width</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li class="active"><a href="{% url 'user_project' %}">Projects </a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--================End Banner Area =================-->
+        
+        <!--================Our Project2 Area =================-->
+        <section class="our_project2_area project_grid_three">
+           <div class="container">
+               <div class="main_c_b_title">
+                    <h2>Our<br class="title_br">Projects</h2>
+                    <h6>Great & Awesome Works</h6>
+                </div>
+                <ul >
+                    <li class="active" data-filter="*"><a href="{% url 'user_project' %}">All</a></li>
+                    <li><a href="{% url 'Commercial' %}">Commercial</a></li>
+                    <li data-filter=".interior"><a href="{% url 'Residential' %}">Residential</a></li>
+                    
+                </ul>
+                <div class="row our_project_details">
+                    
+                    {% for i in projects %}
+
+                    <div class="col-md-4 col-sm-6 building isolation interior">
+                        
+                        <div class="project_item">
+
+                            <img src="{{ i.image1.url }}" alt="jhjhkj">
+                            <div class="project_hover">
+                                <div class="project_hover_inner">
+                                    <div class="project_hover_content">
+                                        <a href="#"><h4>{{i.project.project_name}}</h4></a>
+                                        <p>Our Projects design and Pictures</p>
+                                        <a class="view_btn" href="{% url 'project_single' i.id %}">View Project</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    {% endfor %}
+                </div>
+                
+              
+                </div>
+                
+                </section>
+
+        
+{% endblock %}

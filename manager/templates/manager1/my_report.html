@@ -1,0 +1,53 @@
+{% extends 'manager1/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<section id="main-content">
+  <section class="wrapper">
+      
+    <div class="row">
+      <h2><center>My Report</center></h2>
+      <br>
+<form method="POST">
+    {% csrf_token %}
+    <center><select name="pro" class="form-control" style="width: 500px;">
+<option value="Project"> Select Project</option>
+    {% for pro in maneger %}
+    <option value="{{pro.id}}"> {{pro.project_name|capfirst}}</option>
+        {% endfor %}
+</select>
+    <button type="submit"><i class="fa fa-search"></i> Search</button>
+    
+</center>
+</form>
+<br>
+          <table class="table table-striped">
+            <thead>
+              <tr style="background-color:#4ECDC4;color:black;">
+                
+                <th scope="col">Project</th>
+                <th scope="col">Document</th>
+                <th scope="col">Remarks</th>
+                <th scope="col">Reporting Date</th>
+                <th scope="col">Issues</th>
+                
+              </tr>
+              {% for obj in report %}
+            </thead>
+            <tbody>
+              <tr>
+                
+                <td>{{ obj.project }}</td>
+               <td> <img src="{{obj.document.url}}" alt="description here"  height="80px" width="80px"/></td>
+                <td>{{ obj.remarks }}</td>
+                <td>{{ obj.reporting_date }}</td>
+              <td>{{ obj.issues}}</td>
+             
+             
+              </tr>
+              {% endfor %}
+          </tbody>
+          </table>
+          {% endblock %}

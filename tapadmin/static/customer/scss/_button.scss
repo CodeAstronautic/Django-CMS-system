@@ -1,0 +1,187 @@
+/* Border get Button area css
+============================================================================================ */
+.get_btn{
+    display: inline-block;
+    padding: 0px 35px;
+    border: 2px solid $baseColor;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: $open;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: color .5s;
+    &:before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: $baseColor;
+        height: 250px;
+        width: 300px;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100%;
+        transition: all .7s;
+    }
+    &:hover{
+        color: $dip;
+        &:before{
+            bottom: -50px;
+        }
+    }
+}
+/* End Border get Button area css
+============================================================================================ */
+
+/* End Border get Button area css
+============================================================================================ */
+.view_btn{
+    display: inline-block;
+    background: $dip;
+    text-align: center;
+    padding: 0px 20px;
+    border-radius: 5px;
+    line-height: 28px;
+    color: $gray;
+    font-family: $mon;
+    font-size: 12px;
+    @include transition;
+    &:hover{
+        color: $gray;
+    }    
+}
+/* End Border get Button area css
+============================================================================================ */
+
+/* End get bg Button area css
+============================================================================================ */
+.get_bg_btn{
+    display: inline-block;
+    padding: 0px 35px;
+    border: 2px solid $baseColor;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: $open;
+    text-transform: uppercase;
+    color: $dip;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: color .5s;
+    &:before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: $baseColor;
+        height: 250px;
+        width: 300px;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -50px;
+        transition: all .7s;
+    }
+    &:hover{
+        color: $baseColor;
+        &:before{
+            bottom: 100%;
+        }
+    }
+}
+.get_btn_black{
+    display: inline-block;
+    padding: 0px 35px;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: $open;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: color .5s;
+    background: $dip;
+    border: 2px solid $dip;
+    &:before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: $baseColor;
+        height: 250px;
+        width: 300px;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 100%;
+        transition: all .7s;
+    }
+    &:hover{
+        color: $dip;
+        &:before{
+            bottom: -50px;
+        }
+    }
+}
+.slider_btn{
+    display: inline-block;
+    padding: 0px 36px;
+    border: 2px solid $baseColor;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: $open;
+    text-transform: uppercase;
+    color: #2c2c2c;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: color .5s;
+    &:before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: $baseColor;
+        height: 250px;
+        width: 320px;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -50px;
+        transition: all .7s;
+    }
+    &:hover{
+        color: #fff;
+        &:before{
+            bottom: 100%;
+        }
+    }
+}
+
+.submit_btn{
+	box-shadow: none;
+	background: $baseColor;
+	border-radius: 0px;
+	border: 1px solid $baseColor;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: $open;
+	font-weight: bold;
+	font-size: 14px;
+	@include transition;
+	line-height: 42px;
+	padding: 0px;
+	height: 42px;
+	&:hover{
+		background: #fff;
+		color: $dip;
+	}
+}
+
+/* End get bg Button area css
+============================================================================================ */

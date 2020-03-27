@@ -1,0 +1,24 @@
+{% extends 'Tap_admin/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+{% include 'Tap_admin/heading.html' %}
+<div class="row">
+<div class="col-sm-3 col-md-9 "> 
+</div>
+ 
+
+
+<div class="col-md-4 offset-md-3 ">
+
+
+<form method="POST">
+    {% csrf_token %}
+    {{form|crispy }}
+    <input type="submit" value="Submit">
+</form>
+
+
+{% endblock %}

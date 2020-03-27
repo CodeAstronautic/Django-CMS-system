@@ -1,0 +1,60 @@
+{% extends 'Tap_admin/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+{% include 'Tap_admin/heading.html' %}
+<div class="col-sm-3 col-md-9 "> 
+</div>
+           
+    <a href="{% url 'add_material'  pk=obj.pk%}">
+    <button class="btn btn-primary btn-lg"> +Add New Material </button>
+</a>
+
+<div class="row">
+<div class="col-md-4 offset-md-3 ">
+
+
+<form method="POST">
+    {% csrf_token %}
+    {{form|crispy }}
+    <input type="submit" value="Submit">
+</form>
+<hr>
+</div>
+
+</div>
+<br>
+
+<br>
+<div style="color:blue">
+<h4> Available Materials: </h4>
+
+<table  class="table" >
+<tr style="background-color:#4ECDC4;color:black;"> <td> Material Name</td>
+    <td> Action </td>
+</tr>
+{% for i in mat_type %}
+<tr><td>
+{{i.name|title}}
+</td>
+<td>
+     <a href="{% url 'delete_mat_type' i.id  obj.id %}" class="btn btn-primary a-btn-slide-text">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                      </a>
+</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+<style>
+    form{
+        font-size:15px;
+    }
+    input{
+        font-size:15px;   
+    }
+    </style>
+
+{% endblock %}

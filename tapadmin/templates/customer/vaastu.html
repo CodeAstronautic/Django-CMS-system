@@ -1,0 +1,241 @@
+{% extends 'customer/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vaastu</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/img/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="assets/img/icons/manifest.json">
+    <link rel="mask-icon" href="assets/img/icons/safari-pinned-tab.svg">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="dependencies/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="dependencies/jPushMenu/css/jPushMenu.css" type="text/css">
+    <link rel="stylesheet" href="dependencies/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="dependencies/dt-icons/styles.css" type="text/css">
+    <link rel="stylesheet" href="dependencies/animate.css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="dependencies/Swiper/css/swiper.min.css" type="text/css">
+    <link rel="stylesheet" href="dependencies/magnific-popup/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="dependencies/owl.carousel/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="dependencies/owl.carousel/owl.theme.default.min.css" type="text/css">
+    <link rel="stylesheet" href="dependencies/colornip/css/colornip.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+    <link id="theme" rel="stylesheet" href="assets/css/theme-color/theme-default.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CPT+Sans:400,700" rel="stylesheet">
+	<style>
+	.bcw{background:#fff!important;}
+		.banlogo{margin-left:1048px;margin-top:100px;position:absolute;}.br1{border: 1px solid #1a1a1a;}.jst p{text-align:justify;margin-bottom: 1%!important;}.txc{text-align:center!important;}.rdmr{text-align: center;background: #fff;width: 11%;float: right;border-radius: 5px;font-weight: 600;}
+		@media(width:1280px){.lgg2{margin-top: -378%!important;
+    width: 82%!important;}}
+	</style>
+</head>
+ 
+<body onload="document.video.play()" id="home-version-1" class="home-version-1" data-style="default" data-spy="scroll" data-target="#active-menu"> 
+    <div id="site">
+        /* When the user clicks on the button, 
+toggle between hiding and showing the vc2 content */
+function myFunction() {
+document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the vc2 if the user clicks outside of it
+window.onclick = function(event) {
+if (!event.target.matches('.vc1')) {
+
+var vc2s = document.getElementsByClassName("vc2-content");
+var i;
+for (i = 0; i < vc2s.length; i++) {
+  var openDropdown = vc2s[i];
+  if (openDropdown.classList.contains('show')) {
+    openDropdown.classList.remove('show');
+  }
+}
+}
+}
+</script>	
+        <div class="mblhdr" id="mobile-header">
+            <a class="main-logo" href="#"><img src="assets/img/logo.png" alt=""></a>
+            <div class="menu-container">
+                <div class="menu-toggle toggle-menu menu-right push-body">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-wrapper" class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
+            <div class="mobile-menu-container">
+                <ul class="mobile_menu">
+                    <li class="active"><a href="index.html">Home</a>
+                    </li>
+                     <li class="vc2">
+        
+        
+        <section class="banner">  
+                <video class="hidden-xs" id="video2" autoplay loop width="100%" style="margin-top: 51px;">  
+<source src="{% static 'customer/img/Logo-Design.webm' %}" type="video/webm">
+<source src="assets/img/Logo-Design.ogg" type="video/ogg">
+<source src="assets/img/Logo-Design.mp4" type="video/mp4">
+Your browser does not support the video tag.  
+				</video>  
+				
+				<img class="hidden-sm hidden-md hidden-lg" src="assets/img/main.gif" width="100%">
+				<div style="float:right;" class="hidden-sm hidden-md">
+				<a href="vivs-iita.html"><img class="lgg2" src="assets/img/VIVS-IITA---Logo.png" alt="" style="    position: relative;  margin-top: -1225px; width: 73%;
+    "></a>
+				 
+			</div>
+        </section>
+		<section class="blog-single" id="about">
+            <div class="container">
+                <h2 class="section-title wow zoomIn">About Vaastu</h2>
+                <div class="about-content">
+                    <div class="row"> 
+                        <div class="col-md-7 col-sm-7" style="background-color: bisque;">
+                            <div class="text-justify wow fadeInUp" data-wow-delay="0.2s">
+                                <p>	Vastu Shastra is a vast ancient science of living. Firstly, God Brahma explained to Garga ,Garga to Parashara, he passed the knowledge to Bruhadradha and finally Viswakarma learned from Bruhadradha. Viswakarma spread the Vastu knowledge to the world.  We have acquired the knowledge of Vastu Shastra from Vedas & Puranas and many more ancient books reported many of ancient Rushis. Vastu principles first time found in Righveda. And which is explained in unpaved called StapatyaVeda which is part of Atharva Veda. And also found in Matsya (details of rock carving), Skanda (Principles of town planning), Agni (Residential Vastu), Vayu, Garuda, Bhavishya and Narada (Vastu for temples) puranas.   
+	Apart from above books many more granthas, like Ramayana, Mahabharatha, Chanukya Arthashastra, Brihat Samhita, SamaranganSutradhar, Vishwakarma Prakishika & Mayamat have covered the Vastu Shastra. Eleventh century King Bhoja Raj written Samarangan Sutradhar which is collections of vastu principles from different granthas, this book provides simple remedial measures for correction of vastu faults without damaging the constructed house. 
+<a class="fr" href="#">Read More</a> 				
+</p>
+                            </div>
+                        </div>
+						    <div class="col-md-5">
+                        <div class="blog_post1 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                            <div class="blog-thumb">
+                                <img src="{% static 'customer/img/Vastu - Introduction Image.jpg' %}" alt="" width="100%">
+                            </div>
+                        </div>  
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+        <section class="blog-single abtvaastu" id="about">
+            <div class="container">
+                <h2 class="section-title wow zoomIn">About Astrology</h2>
+                <div class="about-content">
+                    <div class="row">
+	    <div class="col-md-5">
+                        <div class="blog_post wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                            <div class="blog-thumb">
+                               <img src="{% static 'customer/img/astrology.png' %}" alt="" width="100%">
+                            </div>
+                        </div>
+                    </div>					
+                        <div class="col-md-7 col-sm-7" style="background-color: bisque;">
+                            <div class="text-justify wow fadeInUp" data-wow-delay="0.2s">
+                                <p>Jyotisha (or Jyotishyam from Sanskritjyotiṣa, from jyótis- "light, heavenly body") is the traditional Hindu system of astrology, also known as Hindu astrology, Indian astrology, and more recently Vedic astrology. The word astrology comes from the early Latin word astrologia, which derives from the Greekἀστρολογία—from ἄστρονastron ("star") and -λογία-logia, ("study of"—"account of the stars"). Astrologia later passed into meaning 'star-divination' with astronomia used for the scientific term. Astrology deals with the apparent positions of the planets and constellations at the precise moment of someone's birth, and claims that these relates systematically to their character, personality traits, relationships with others, profession and auspicious times of their life. Astrology is not widely regarded as science and is typically defined as a form of divination. Astrology is the study of the movements and relative positions of celestial objects as a means for divining information about human affairs and terrestrial events. Many cultures have attached importance to astronomical events, and the Indians, Chinese, and Maya developed elaborate systems for predicting terrestrial events from celestial observations. In the West, astrology most often ..
+								<a class="fr" href="#">Read More</a>
+</p>
+                            </div>
+                        </div>
+					
+                    </div>
+                </div>
+            </div>
+        </section>
+		 <div class="col-md-12 bcw" >
+            
+            <div class="col-md-6 bcw">
+            </div>
+		 </div>
+                <h4>SPECIALIST :</h4>
+<p>Planning of New Buildings for Residential, Corporate, Commercial and Industry as per Traditional & Advanced Vastu Principles and also by considering  5 Elements, 16 Directions, 32 Entrances and 45 Devine Powers.
+</p>
+<br>
+<h4>EXPERT IN : </h4>	
+<p>Correcting of Vastu Defects in the Existing Buildings without any physical alternations using Elemental Balance Theory and by using Principle of “Right Activities at Right Place”. Provide Best Solutions for Health, Wealth, Relationships & Professional Problems. </p>
+<br>
+<h4>MENTOR FOR :</h4>	
+
+<p>Traditional and Scientific Vastu Sciences for Astrologers, Architects, Builders, Civil Engineers, Interior Designer and who wants to start Vastu as a Profession (3+1 Days Non-Residential & 6 Days Residential Training Program).</p>
+<br>
+<h4>CORPORATE CONSULTANT : </h4>
+	
+<p>Naming for Business, Expert in Business Partnership Compatibility and Help in Designing of Business Cards.</p>
+<br>
+
+</div>            
+</div>
+        </div>
+          
+                  
+        
+	</div>  
+	 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+    <script src="dependencies/jquery/jquery.min.js"></script>
+    <script src="dependencies/bootstrap/js/bootstrap.min.js"></script>
+    <script src="dependencies/scroll-up-bar/scroll-up-bar.min.js"></script>
+    <script src="dependencies/jPushMenu/jPushMenu.js"></script>
+    <script src="dependencies/Swiper/js/swiper.min.js"></script>
+    <script src="dependencies/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="dependencies/wow/wow.min.js"></script>
+    <script src="dependencies/countUp.js/countUp.min.js"></script>
+    <script src="dependencies/owl.carousel/js/owl.carousel.min.js"></script>
+    <script src="dependencies/jquery.appear.bas2k/jquery.appear.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAssaWBjq7xp_L88KSNA6X7wVA-HxF9rtM"></script>
+    <script src="dependencies/gmap3/gmap3.min.js"></script>
+    <script src="dependencies/isotope/isotope.pkgd.min.js"></script>
+    <script src="dependencies/colornip/colornip.min.js"></script>
+    <script src="assets/js/smooth-scroll.js"></script>
+    <script src="dependencies/mixitup/jquery.mixitup.min.js"></script>
+    <script src="assets/js/app.js"></script>
+	
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document 
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script> 
+<script> 
+video.addEventListener("domready", function(){
+</script> 
+<script type="text/javascript">
+    $(document).ready(function() {   
+    $("#video").bind("click", function() {
+    var vid = $(this).get(0);
+    if (vid.paused) { vid.play(); }      
+    else { vid.pause(); } 
+    }); 
+});        
+</script> 
+  <script> 
+	 
+	 $(document).ready(function ()  
+	{ 
+		if (window.matchMedia("(min-width:320px ) and (max-width:560px )").matches)  
+		{     
+		$('.test-height').css({'height':'auto','padding':(($(window).height()) / 8)+'px 0px'});     
+		} 
+		else    
+		{                  
+		$('.test-height').css({'height': (($(window).height()) - 30)+'px','padding':(($(window).height()) / 4)+'px 0px'});      
+		}      
+	});    
+  </script>  
+</body>
+ 
+</html>
+{% endblock %}
+
+
+
+
+            
+        

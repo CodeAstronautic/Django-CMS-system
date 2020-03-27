@@ -1,0 +1,36 @@
+{% extends 'Tap_admin/base.html' %}
+{% load static %}
+{% block content %}
+{% include 'Tap_admin/heading.html' %}
+{% load crispy_forms_tags %}
+<div class="row">
+<div class="col-md-4 offset-md-5 ">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <span style="color: blue;">
+        Upload Project Image
+        {{ form|crispy }}
+    </span>
+        <button type="submit">Upload</button>
+    </form>
+</div>
+</div>
+
+<hr>
+<div class="row">
+    
+{% for i in images %}
+<div class="col-md-4">
+<div class="card">
+    <img src="{{i.document.url}}" class="card-img-top" height="200px" width="200px">
+    <div class="card-body">
+        <a href="{% url 'delete_image' pk=i.id %}">Delete</a>
+    </div>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+
+
+{% endblock %}

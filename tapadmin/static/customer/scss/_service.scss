@@ -1,0 +1,375 @@
+/* Our Service area css
+============================================================================================ */
+.our_service_area{
+    background: #1e2126;
+    overflow: hidden;
+    clear: both;
+    .left_service{
+        width: calc(50% + 80px);
+        float: left;
+        overflow: hidden;
+        background: url(../img/service-bg.jpg) no-repeat scroll center center;
+        background-size: cover;
+        .left_service_inner{
+            max-width: 635px;
+            float: right;
+            padding-right: 65px;
+            margin: 65px 0px;
+            .service_item{
+                width: calc(100% / 2);
+                float: left;
+                padding-right: 30px;
+                padding-bottom: 25px;
+                .service_item_inner{
+                    background: #fff;
+                    padding: 35px 20px 30px 20px;
+                    text-align: center;
+                    border-top: 3px solid $baseColor;
+                    @include transition;
+                    .service_icon{
+                        position: relative;
+                        img{
+                            opacity: 1;
+                            @include transition;
+                            & + img{
+                                position: absolute;
+                                top: 0px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                opacity: 0;
+                                @include transition;
+                            }
+                        }
+                    }
+                    h4{
+                        font-size: 12px;
+                        font-family: $mon;
+                        font-weight: bold;
+                        color: $dip;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        padding: 13px 0px 8px 0px;
+                    }
+                    p{
+                        font-size: 12px;
+                        line-height: 18px;
+                        color: $pfont;
+                        font-family: $mon;
+                        padding-bottom: 10px;
+                    }
+                    .view_btn{
+                        opacity: 0;
+                    }
+                    &:hover{
+                        background: $baseColor;
+                        .service_icon{
+                            img{
+                                opacity: 0;
+                                & + img{
+                                    opacity: 1;
+                                }    
+                            }
+                        }
+                        .view_btn{
+                            opacity: 1;
+                        }
+                    }
+                }
+                &:nth-last-child(-n+2){
+                    padding-bottom: 0px;
+                }
+            }
+        }
+    }
+    .right_service{
+        width: calc(50% - 80px);
+        float: right;
+        overflow: hidden;
+        .right_service_text{
+            max-width: 380px;
+            margin-left: 95px;
+            padding-top: 100px;
+            .main_b_title{
+                padding-bottom: 30px;
+            }
+            p{
+                font-size: 15px;
+                font-family: $open;
+                color: $dw;
+                line-height: 26px;
+                padding-bottom: 30px;
+            }
+            .border_bar{
+                margin-top: 20px;
+            }    
+        }
+    }    
+}
+/* End Our Service area css
+============================================================================================ */
+
+/* Best Company area css
+============================================================================================ */
+.best_company_area{
+    padding: 60px 0px;
+}
+.b_companu_l_text{
+    h4{
+        font-size: 30px;
+        font-family: $pt;
+        font-weight: bold;
+        color: #343434;
+        text-transform: uppercase;
+    }
+    p{
+        font-size: 18px;
+        line-height: 28px;
+        color: $pfont;
+        font-family: $open;
+        padding: 25px 0px 35px 0px;
+    }
+    .slider_btn{
+        padding: 0px 40px;
+        line-height: 46px;
+        &:hover{
+            color: $baseColor;
+        }
+    }
+}
+/* End Best Company area css
+============================================================================================ */
+
+/* Our Service2 area css
+============================================================================================ */
+.our_service_area2{
+    background: #f5f5f5;
+    padding: 100px 0px 65px 0px;
+    .main_c_b_title{
+        padding-bottom: 40px;
+    }
+}
+.service2_inner{
+    margin-bottom: -30px;
+    overflow: hidden;
+    .col-md-4{
+        margin-bottom: 30px;
+    }
+    .service2_item{
+		height: 304px;
+        .service2_item_inner{
+            text-align: center;
+            background: #fff;
+            padding: 45px 20px 16px 20px;
+            min-height: 304px;
+            @include transition;
+            .service_icon{
+                position: relative;
+                display: inline-block;
+                img{
+                    opacity: 1;
+                    & + img{
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        opacity: 0;
+                    }    
+                }
+            }
+            h4{
+                font-size: 18px;
+                color: $dip;
+                font-family: $mon;
+                font-weight: bold;
+                padding: 20px 0px 18px 0px;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: 15px;
+                color: $pfont;
+                line-height: 26px;
+                font-family: $open;
+                transition: all 200ms linear;
+            }
+            .view_btn{
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        &:hover{
+            .service2_item_inner{
+                transform: rotateY(180deg);
+                background: $baseColor;
+                .service2_item_inner_content{
+                    transform: rotateY(-180deg);
+                    .service_icon{
+                        img{
+                            opacity: 0;
+                            & + img{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    p{
+                        display: none;
+                    }
+                    .view_btn{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+/* End Our Service2 area css
+============================================================================================ */
+
+/* Others Service area css
+============================================================================================ */
+.service_single_area{
+    padding: 100px 0px;
+}
+.other_service_area{
+    background: #f7f7f7;
+    padding: 80px 0px 70px 0px;
+    .project_title{
+        padding-bottom: 55px;
+    }
+    .other_service_slider{
+        margin-bottom: 0px;
+        overflow: visible;
+        .service2_item{
+            &:hover{
+                .service2_item_inner{
+                    min-height: 311px;
+                }
+            }
+        }
+        .owl-prev, .owl-next{
+            height: 45px;
+            width: 30px;
+            border: 1px solid #444444;
+            line-height: 40px;
+            font-size: 25px;
+            color: #444444;
+            text-align: center;
+            position: absolute;
+            right: 0px;
+            top: -90px;
+            z-index: 10;
+            cursor: pointer;
+            @include transition;
+            &:hover{
+                border-color: $baseColor;
+                background: $baseColor;
+                color: #fff;
+            }
+        }
+        .owl-prev{
+            right: 40px;
+        }
+    }    
+}
+.s_text_inner{
+    padding-top: 60px;
+}
+.left_service_desc{
+    .project_title{
+        padding-bottom: 20px;
+    }
+    p{
+        font-size: 15px;
+        font-family: $open;
+        color: #444444;
+        line-height: 26px;
+    }
+    ul{
+        padding-left: 10px;
+        padding-top: 20px;
+        li{
+            a{
+                font-size: 15px;
+                color: #444444;
+                font-family: $open;
+                line-height: 30px;
+                i{
+                    padding-right: 7px;
+                    color: $baseColor;
+                }
+            }
+        }
+    }
+}
+.our_skill_inner{
+    .project_title{
+        padding-bottom: 20px;
+    }  
+    .single_skill{
+        margin-bottom: 20px;
+        h3{
+            font-size: 14px;
+            font-family: $open;
+            color: #444444;
+            line-height: 28px;
+        }
+        .progress{
+            height: 8px;
+            background: #efefef;
+            overflow: visible;
+            border-radius: 4px;
+            box-shadow: none;
+            margin-bottom: 0px;
+            .progress-bar{
+                background: $baseColor;
+                border-radius: 4px;
+                border: none;
+                box-shadow: none;
+                position: relative;
+                .progress_parcent{
+                    position: absolute;
+                    right: 0px;
+                    top: -20px;
+                    font-size: 14px;
+                    color: #444444;
+                    font-family: $open;
+                }
+            }
+        }
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+}
+.service_brochure{
+    margin-top: 35px;
+    .project_title{
+        padding-bottom: 20px;
+    }  
+    p{
+        font-size: 15px;
+        font-family: $open;
+        color: #444444;
+        line-height: 26px;
+        padding-bottom: 17px;
+    }
+    a{
+        font-size: 15px;
+        font-family: $open;
+        color: #444444;
+        line-height: 26px;
+        vertical-align: middle;
+        margin-right: 90px;
+        i{
+            padding-right: 13px;
+            color: $baseColor;
+            font-size: 25px;
+            vertical-align: middle;
+            line-height: 34px;
+        }
+        &:last-child{
+            margin-right: 0px;
+        }
+    }
+}
+/* End Others Service area css
+============================================================================================ */

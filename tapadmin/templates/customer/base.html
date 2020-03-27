@@ -1,0 +1,230 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" href="{% static ' customer/img/fav-icon.png' %}" type="image/x-icon" />
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>TAP construction plus</title>
+
+        <!-- Icon css link -->
+        <link href="{% static 'customer/css/font-awesome.min.css' %}" rel="stylesheet">
+        <link href="{% static 'customer/css/materialdesignicons.min.css' %}" rel="stylesheet">
+        
+        <!-- Bootstrap -->
+        <link href="{% static 'customer/css/bootstrap.min.css' %}" rel="stylesheet">
+        
+        <!-- Rev slider css -->
+        <link href="{% static 'customer/vendors/revolution/css/settings.css' %}" rel="stylesheet">
+        <link href="{% static 'customer/vendors/revolution/css/layers.css' %}" rel="stylesheet">
+        <link href="{% static 'customer/vendors/revolution/css/navigation.css' %}" rel="stylesheet">
+        <link href="{% static 'customer/vendors/animate-css/animate.css' %}" rel="stylesheet">
+        <link href="{% static 'customer/vendors/owl-carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        
+        <!-- Extra plugin css -->
+        <link href="{% static 'customer/css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'customer/css/responsive.css' %}" rel="stylesheet">   
+    </head>
+    <body>
+       
+       
+
+<header class="main_header_area">
+    <div class="header_top_area">
+        <div class="container">
+            <div class="pull-left">
+                <a href="#"><i class="fa fa-phone"></i>(012) - 3456789</a>
+                <a href="#"><i class="fa fa-map-marker"></i>Udhana Darvaja,Surat </a>
+                <a href="#"><i class="mdi mdi-clock"></i>08 AM - 10 PM</a>
+               
+                      </form>
+                    </div>
+                  </div>
+                  
+                 
+                
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="main_menu_area">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="{% static 'customer/img/logo4.png' %}" alt=""></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown submenu active">
+                            <a href="{% url 'index' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                            
+                        </li>
+                        <li><a href="{% url 'vaastu' %}">Vaastu</a>
+                            </li>
+                        <li class="dropdown submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'user_project' %}">Project </a></li>
+                                
+                                
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'service_single' %}">Services</a></li>
+                        <li><a href="{% url 'booking_flat' %}">Booking Flat</a></li>
+                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                        
+                        {% if user.is_authenticated %}
+                        <li class="dropdown submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'edit_profile' %}">Edit profile</a></li>
+                                <li><a href="{% url 'change_password' %}">Change Password</a></li>
+                                <li><a href="{% url 'project_grid_two_column' %}">orders</a></li>
+                               
+                            </ul>
+                            <li><a href="{% url 'blog_detail' %}">blog</a></li>
+                            
+
+                        <li><a href="{% url 'logout_user' %}">Logout</a></li>
+                        {% else %}
+                       
+                        <li><a href="{% url 'login_user' %}">Login</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                        <li class="icon_search"><a href="#"><i class="mdi mdi-cart"></i></a></li>
+                        {% endif %}
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </div>
+    </div>
+
+</header>
+
+{% block content %}
+{% endblock %}
+
+
+<footer class="footer_area">
+    <div class="footer_widgets_area">
+        <div class="container">
+            <div class="row footer_widgets_inner">
+                <div class="col-md-3 col-sm-6">
+                    <aside class="f_widget about_widget">
+                        <img src="{% static 'customer/img/footer-logo4.png' %}" alt="">
+                        <p></p>
+                        
+                    </aside>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <aside class="f_widget recent_widget">
+                        <div class="f_w_title">
+                            <h3>Recent Posts</h3>
+                        </div>
+                        <div class="recent_w_inner">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="{% static 'customer/img/blog/recent-post/recent-1.png' %}" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <a href="#"><p>The road to success is always under con-struction</p></a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="{% static 'customer/img/blog/recent-post/recent-2.png' %}" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <a href="#"><p>The road to success is always under con-struction</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <aside class="f_widget address_widget">
+                        <div class="f_w_title">
+                            <h3>Office Address</h3>
+                        </div>
+                        <div class="address_w_inner">
+                            <div class="media">
+                                <div class="media-left">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="media-body">
+                                    <p>Udhana Darvaja, Surat</p>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="media-body">
+                                    <p>(012) 3456789 </p>
+                                    <p>(012) 3456789 </p>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="media-body">
+                                    <p>name@tap.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <aside class="f_widget give_us_widget">
+                        <h5>Give Us A Call</h5>
+                        <h4>(012) 3456789</h4>
+                        <h5>or</h5>
+                        <a class="get_bg_btn" href="{% url 'quote' %}">GET A QUOTE</a>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="{% static 'customer/js/jquery-2.2.4.js' %}"></script>
+ <!-- Include all compiled plugins (below), or include individual files as needed -->
+ <script src="{% static 'customer/js/bootstrap.min.js' %}"></script>
+ <!-- Rev slider js -->
+ <script src="{% static 'customer/vendors/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+ <script src="{% static 'customer/vendors/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+ <script src="{% static 'customer/vendors/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+ <script src="{% static 'customer/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+ <script src="{% static 'customer/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+ <script src="{% static 'customer/vendors/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+ 
+ <script src="{% static 'customer/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+ <script src="{% static 'customer/vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+ <script src="{% static 'customer/vendors/isotope/isotope.pkgd.min.js' %}"></script>
+ <script src="{% static 'customer/vendors/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+ <script src="{% static 'customer/vendors/counterup/waypoints.min.js' %}"></script>
+ <script src="{% static 'customer/vendors/counterup/jquery.counterup.min.js' %}"></script>
+ <script src="{% static 'customer/vendors/flex-slider/jquery.flexslider-min.js' %}"></script>
+ 
+ <!--gmaps Js-->
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+ <script src="{% static 'customer/js/gmaps.min.js' %}"></script>
+ 
+ <script src="{% static 'customer/js/theme.js' %}"></script>
+</body>
+</html>

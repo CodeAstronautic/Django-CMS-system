@@ -1,0 +1,176 @@
+/* Who We Are area css
+============================================================================================ */
+.who_we_are_area{
+    padding-top: 100px;
+    .main_w_title{
+        padding-bottom: 30px;
+    }
+}
+.who_we_inner{
+    .who_we_left_content{
+        p{
+            font-size: 15px;
+            line-height: 26px;
+            color: $pfont;
+            padding-bottom: 30px;
+        }
+        .border_bar{
+            height: 1px;
+            background: $baseColor;
+            width: 100%;
+            margin-top: 10px;
+        }    
+    }    
+}
+/* End Who We Are area css
+============================================================================================ */
+
+/* Pre Construction area css
+============================================================================================ */
+.preconstruction_area{
+    overflow: hidden;
+    .pre_construction_inner{
+        .col-md-6{
+            overflow: hidden;
+            padding: 0px;
+        }
+    }
+}
+.pre_construction_item{
+    position: relative;
+    z-index: 3;
+    &:before{
+        content: "";
+        background: rgba(255, 255, 255, .95);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+	img{
+		width: 100%;
+	}
+    
+}
+.pre_hover{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    max-width: 530px;
+    h4{
+        font-size: 25px;
+        font-family: $pt;
+        font-weight: bold;
+        color: $baseColor;
+    }
+    p{
+        font-size: 18px;
+        font-family: $open;
+        line-height: 26px;
+        color: $pfont;
+        padding: 25px 0px 40px 0px;
+    }
+    .slider_btn{
+        line-height: 46px;
+        padding: 0px 29px;
+        &:hover{
+            color: $baseColor;
+        }
+    }
+}
+.pre_construction_right{
+    position: relative;
+    z-index: 3;
+    &:before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+        background: rgba(49, 53, 61, .95);
+        position: absolute;
+    }
+	img{
+		width: 100%;
+	}
+    .pre_hover{
+        h4{
+            color: #fff;
+        }
+        p{
+            color: #e8e8e8;
+        }
+    }
+}
+/* End Pre Construction area css
+============================================================================================ */
+
+/* Chose Video area css
+============================================================================================ */
+.chose_video_area{
+    overflow: hidden;
+    background: #1e2126;
+    .chose_left_text{
+        width: calc(50% + 15px);
+        float: left;
+        overflow: hidden;
+        .chose_text_inner{
+            max-width: 505px;
+            float: right;
+        }
+    }
+    .chose_video_right{
+        width: calc(50% - 15px);
+        float: right;
+        overflow: hidden;
+    }
+}
+.chose_text_inner{
+    padding-right: 30px;
+    .main_b_title{
+        margin-top: 100px;
+    }
+    p{
+        font-size: 15px;
+        font-family: $open;
+        line-height: 26px;
+        color: #e8e8e8;
+        padding: 25px 0px 15px 0px;
+    }
+    ul{
+        border-bottom: 1px solid $baseColor;
+        padding-bottom: 45px;
+        li{
+            margin-bottom: 3px;
+            a{
+                font-size: 15px;
+                font-family: $open;
+                line-height: 26px;
+                color: #e8e8e8;
+                padding-left: 4px;
+                i{
+                    padding-right: 4px;
+                }
+            }
+        }
+    }
+}
+.chose_video_inner{
+	overflow: hidden;
+    position: relative;
+    a{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+/* End Chose Video area css
+============================================================================================ */

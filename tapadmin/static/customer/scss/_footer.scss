@@ -1,0 +1,166 @@
+/* Footer area css
+============================================================================================ */
+.footer_area{
+    
+}
+.footer_widgets_area{
+    background: $dip;
+    padding: 70px 0px;
+	&.footer_bg{
+		background: linear-gradient(0deg, rgba(49,53,61,0.96), rgba(49,53,61,.96)), url(../img/footer-bg.jpg) no-repeat scroll center center;
+		background-size: cover;
+	}
+}
+.footer_widgets_inner{
+    
+}
+.f_w_title{
+    padding-bottom: 30px;
+    h3{
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: $pt;
+        font-weight: bold;
+        color: $baseColor;
+    }
+}
+.f_widget{
+    
+}
+.about_widget{
+    p{
+        font-size: 15px;
+        font-family: $open;
+        color: $dw;
+        line-height: 20px;
+        padding: 13px 0px 17px 0px;
+    }
+    ul{
+        li{
+            display: inline-block;
+            margin-right: 36px;
+            a{
+                font-size: 20px;
+                color: $dw;
+                @include transition;
+            }
+            &:first-child{
+                &:hover{
+                    a{
+                        color: #4267b2;
+                    }
+                }
+            }
+            &:nth-child(3){
+                &:hover{
+                    a{
+                        color: #db4437;
+                    }
+                }
+            }
+            &:last-child{
+                margin-right: 0px;
+                &:hover{
+                    a{
+                        color: #bd081c;
+                    }
+                }
+            }
+            &:hover{
+                a{
+                    color: #00aced;
+                }
+            }
+        }
+    }
+}
+.recent_w_inner{
+    .media{
+        .media-left{
+            padding-right: 10px;
+        }
+        .media-body{
+            p{
+                font-size: 15px;
+                font-family: 600;
+                font-family: $open;
+                color: $dw;
+                line-height: 20px;
+            }
+        }
+    }
+}
+.address_w_inner{
+    .media{
+        .media-left{
+            padding-right: 10px;
+            i{
+                color: $dw;
+            }
+        }
+        .media-body{
+            p{
+                font-size: 15px;
+                color: $dw;
+                font-family: $open;
+                line-height: 20px;
+            }
+        }
+    }
+}
+.give_us_widget{
+    text-align: center;
+    h5{
+        font-size: 24px;
+        color: $baseColor;
+        font-family: $open;
+    }
+    h4{
+        font-size: 32px;
+        font-family: $open;
+        font-weight: bold;
+        color: $baseColor;
+        padding: 23px 0px 12px 0px;
+    }
+    a{
+        margin-top: 17px;
+    }
+}
+.footer_copy_right{
+    text-align: center;
+    background: #262a31;
+    padding: 41px 0px;
+    h4{
+        color: $dw;
+        font-size: 18px;
+        font-family: $open;
+        i{
+            color: $baseColor;
+        }
+        a{
+            color: $dw;
+        }
+    }
+}
+.footer_menu{
+	li{
+		display: inline-block;
+		margin-right: 25px;
+		a{
+			color: $gray;
+			font-family: $open;
+			font-size: 18px;
+		}
+		&:last-child{
+			margin-right: 0px;
+		}
+		&:hover, &.active{
+			a{
+				color: $baseColor;
+			}
+		}
+	}
+}
+/* End Footer area css
+============================================================================================ */

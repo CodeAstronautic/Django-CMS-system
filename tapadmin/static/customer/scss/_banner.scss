@@ -1,0 +1,64 @@
+/* Clients area css
+============================================================================================ */
+.banner_area{
+    background: url(../img/banner-bg.jpg) no-repeat scroll center center;
+    background-size: cover;
+    position: relative;
+    z-index: 3;
+    padding: 90px 0px 80px 0px;
+    &:before{
+        content: "";
+        background: rgba(30, 33, 38, .5);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+.banner_inner_text{
+    text-align: center;
+    h4{
+        font-size: 35px;
+        font-family: $pt;
+        font-weight: bold;
+        color: #fff;
+        padding-bottom: 3px;
+    }
+    ul{
+        li{
+            display: inline-block;
+            a{
+                font-size: 18px;
+                color: #fff;
+                font-family: $open;
+                padding-right: 15px;
+                position: relative;
+                @include transition;
+                &:before{
+                    content: "/";
+                    position: absolute;
+                    right: 2px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #fff;
+                }
+            }
+            &:last-child{
+                a{
+                    &:before{
+                        display: none;
+                    }
+                }
+            }
+            &:hover, &.active{
+                a{
+                    color: $baseColor;
+                }
+            }
+        }
+    }
+}
+/* Clients area css
+============================================================================================ */

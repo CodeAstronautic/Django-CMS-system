@@ -1,0 +1,34 @@
+{% extends 'manager1/base.html' %}
+
+{% block content %}
+{% include 'manager1/heading.html' %}
+{% load crispy_forms_tags %}
+
+
+
+<section id="main-content">
+    <section class="wrapper">
+<div class="row">
+
+  
+
+    
+{% for i in images %}
+<div class="col-md-4">
+<div class="card">
+    <img src="{{i.document.url}}" class="card-img-top" height="200px" width="200px">
+    <div class="card-body">
+    
+    </div>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+
+
+
+{% endblock %}
+
+
+

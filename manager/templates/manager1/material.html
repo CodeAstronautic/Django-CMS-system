@@ -1,0 +1,72 @@
+{% extends 'manager1/base.html' %}
+
+{% block content %}
+{% include 'manager1/heading.html' %}
+{% load crispy_forms_tags %}
+
+<style>
+table {
+  
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+
+<section id="main-content">
+    <section class="wrapper">
+
+<div class="text-right">
+  <a href="{% url 'material_request_status' pk %}">
+  <button type="button" class="btn btn-primary"> My Request</button></a>
+
+  <a href="{% url 'material_request' pk %}">
+  <button type="button" class="btn btn-primary">+Request New Material</button></a>
+
+  
+</div>
+
+<table  class="table">
+  
+    <tr style="background-color:#4ECDC4;">
+      <th scope="col">Cost</th>
+      <th scope="col">Purchased Date</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Company Name</th>
+      
+    </tr>
+ 
+  <tbody>
+{% for i in data %}
+
+<tr>
+
+<th scope="row">{{ i.cost}}</th>
+<th>{{ i.purchased_date}}</th>
+<th>{{ i.quantity}}</th>
+<th>{{ i.company_name}}</th>
+</tr>
+
+
+
+
+</tr>
+{% endfor %}
+</table>
+
+
+<br>
+</body>
+</html>
+
+{% endblock %}

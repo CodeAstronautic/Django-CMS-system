@@ -1,0 +1,17 @@
+{% extends 'manager1/base.html' %}
+
+{% block content %}
+{% include 'manager1/heading.html' %}
+{% load crispy_forms_tags %}
+
+
+<section id="main-content">
+    <section class="wrapper">
+
+<form method="POST">
+    {% csrf_token %}
+    {{form|crispy}}
+<input type="submit">
+</form>
+
+{% endblock %}

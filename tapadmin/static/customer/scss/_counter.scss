@@ -1,0 +1,26 @@
+/* Counter area css
+============================================================================================ */
+.counter_area{
+    background: #31353d;
+    padding: 60px 0px;
+}
+.counter_item{
+    text-align: center;
+    color: $dw;
+    i{
+        font-size: 40px;
+    }
+    h4{
+        font-size: 35px;
+        font-family: $open; 
+        font-weight: 600;
+        padding: 13px 0px 10px 0px;
+    }
+    h5{
+        font-size: 16px;
+        font-family: $open;
+        text-transform: uppercase;
+    }
+}
+/* End Counter area css
+============================================================================================ */

@@ -1,0 +1,241 @@
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration:none;
+    &:hover, &:focus{
+       text-decoration:none;
+       outline: none;
+    }
+}
+.row.m0{
+    margin: 0px;
+}
+.p0{
+    padding: 0px;   
+}
+body{
+    line-height: 24px;
+    font-size: 14px;
+    font-family: $open; 
+    color: $pfont;
+}
+
+body, p, h1, h2, h3, h4, h5, h6{
+    margin: 0px;
+    padding: 0px;
+}
+#success{
+    display: none;
+}
+#error{
+    display: none;
+}
+
+.display_table{
+    display: table;
+    width: 100%;
+}
+.display_table_row{
+    display: table-row;
+}
+.display_table_cell{
+    display: table-cell;
+    float: none !important;
+}
+
+iframe{
+    border: none;
+}
+
+.border_bar{
+    height: 1px;
+    background: $baseColor;
+    width: 100%;
+}  
+.p_100{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+/* Main white title css
+============================================================================================ */
+.main_w_title{
+    h2{
+        font-size: 40px;
+        font-family: $pt;
+        color: $dip;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        &:before{
+            content: "";
+            width: 170px;
+            height: 100px;
+            border: 6px solid #f2f2f2;
+            position: absolute;
+            left: 47px;
+            bottom: 10px;
+            z-index: -1;
+        }
+    }
+    h6{
+        font-size: 15px;
+        font-family: $pt;
+        color: $baseColor;
+        font-weight: bold;
+        padding-top: 12px;
+    }
+}
+/* End Main white title css
+============================================================================================ */
+
+/* Main Black title css
+============================================================================================ */
+.main_b_title{
+    h2{
+        font-size: 40px;
+        font-family: $pt;
+        color: $dw;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        &:before{
+            content: "";
+            width: 170px;
+            height: 100px;
+            border: 6px solid #292c31;
+            position: absolute;
+            left: 47px;
+            bottom: 10px;
+            z-index: -1;
+        }
+    }
+    h6{
+        font-size: 15px;
+        font-family: $pt;
+        color: $baseColor;
+        font-weight: bold;
+        padding-top: 12px;
+    }
+}
+/* End Main white title css
+============================================================================================ */
+
+/* Main white center title css
+============================================================================================ */
+.main_c_title{
+    text-align: center;
+    h2{
+        font-size: 40px;
+        font-family: $pt;
+        color: $dw;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        &:before{
+            content: "";
+            width: 170px;
+            height: 100px;
+            border: 6px solid rgba(255, 255, 255, .08);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+            z-index: -1;
+        }
+    }
+    h6{
+        font-size: 15px;
+        font-family: $pt;
+        color: $baseColor;
+        font-weight: bold;
+        padding-top: 12px;
+    }
+}
+.main_c_b_title{
+    text-align: center;
+    h2{
+        font-size: 40px;
+        font-family: $pt;
+        color: $dip;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        &:before{
+            content: "";
+            width: 170px;
+            height: 100px;
+            border: 6px solid #ebebeb;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+            z-index: -1;
+        }
+    }
+    h6{
+        font-size: 15px;
+        font-family: $pt;
+        color: $baseColor;
+        font-weight: bold;
+        padding-top: 12px;
+    }
+}
+/* End Main white title css
+============================================================================================ */
+
+/* Main white center title css
+============================================================================================ */
+.main_b_r_title{
+    text-align: right;
+    h2{
+        font-size: 40px;
+        font-family: $pt;
+        color: $dip;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        &:before{
+            content: "";
+            width: 170px;
+            height: 100px;
+            border: 6px solid #ebebeb;
+            position: absolute;
+            right: 36px;
+            bottom: 10px;
+            z-index: -1;
+        }
+    }
+    h6{
+        font-size: 15px;
+        font-family: $pt;
+        color: $baseColor;
+        font-weight: bold;
+        padding-top: 12px;
+    }
+}
+/* End Main white title css
+============================================================================================ */
+
+/* Our title css
+============================================================================================ */
+.out_title{
+    font-size: 25px;
+    font-family: $pt;
+    font-weight: bold;
+    color: $dip;
+    text-align: center;
+}
+/* End Our title css
+============================================================================================ */
+
+
+

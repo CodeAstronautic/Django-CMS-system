@@ -1,0 +1,50 @@
+{% extends 'manager1/base.html' %}
+
+{% block content %}
+{% include 'manager1/heading.html' %}
+{% load crispy_forms_tags %}
+
+
+<section id="main-content">
+    <section class="wrapper">
+<table  class="table">
+  
+    <tr style="background-color:#4ECDC4;">
+      <th scope="col">Material Type</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+      
+    </tr>
+ 
+  <tbody>
+
+{% for i in  mat %}
+<tr>
+
+    <td>{{i.material_type|capfirst}}</td>
+    <td>{{i.cost}}</td>
+    <td>{{i.quantity}}</td>
+    
+    
+    <td>{{i.status}}</td>
+    {% if i.status == 'Approve' %}
+    <td> <a href="{% url 'add_material_man' pk i.id %}"> Bought Details</a> </td>
+    {% endif %}
+</tr>
+
+
+{% endfor %}
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+{% endblock %}

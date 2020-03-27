@@ -1,0 +1,123 @@
+{% load static %}
+{% block content %}
+<html>
+<section class="our_project_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="project_left_side">
+                    <div class="main_w_title">
+                        <h2>OUR <br class="title_br" /> projects</h2>
+                        <h6>Great & Awesome Works</h6>
+                    </div>
+                    <ul class="our_project_filter">
+                        <li class="active" data-filter="*"><a href="#">All</a></li>
+                        <li data-filter=".building"><a href="#">Buildings</a></li>
+                        <li data-filter=".interior"><a href="#">Interior</a></li>
+                        <li data-filter=".design"><a href="#">Design</a></li>
+                        <li data-filter=".isolation"><a href="#">Isolation</a></li>
+                        <li data-filter=".plumbing"><a href="#">Plumbing</a></li>
+                        <li data-filter=".tiling"><a href="#">Tiling</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="our_project_details">
+                    <div class="project_item building isolation tiling">
+                        <img src="{% static 'customer/img/project/th (2).jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/th.jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/th (1).jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/th (3).jpg' %}" alt="">
+
+                        <div class="project_hover">
+                            <div class="project_hover_inner">
+                                <div class="project_hover_content">
+                                    <a href="#"><h4>Jahanara Vila</h4></a>
+                                    <p>Sachin Surat Constrcution</p>
+                                    <a class="view_btn" href="#">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_item building isolation plumbing">
+                        <img src="{% static 'customer/img/project/project-2.jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/th (4).jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/th (5).jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/th (6).jpg' %}" alt="">
+                        <div class="project_hover">
+                            <div class="project_hover_inner">
+                                <div class="project_hover_content">
+                                    <a href="#"><h4>Jahanara Vila</h4></a>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+                                    <a class="view_btn" href="#">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_item building interior design">
+                        <img src="{% static 'customer/img/project/th (7).jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/th (8).jpg' %}" alt="">
+                        
+                        <div class="project_hover">
+                            <div class="project_hover_inner">
+                                <div class="project_hover_content">
+                                    <a href="#"><h4>Jahanara Vila</h4></a>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+                                    <a class="view_btn" href="#">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_item interior isolation plumbing">
+                        <img src="{% static 'customer/img/project/project-4.jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/project-4.jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/project-4.jpg' %}" alt="">
+                        <div class="project_hover">
+                            <div class="project_hover_inner">
+                                <div class="project_hover_content">
+                                    <a href="#"><h4>Jahanara Vila</h4></a>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+                                    <a class="view_btn" href="#">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_item interior design tiling">
+                        <img src="{% static 'customer/img/project/project-5.jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/project-5.jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/project-5.jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/project-5.jpg' %}" alt="">
+                        <div class="project_hover">
+                            <div class="project_hover_inner">
+                                <div class="project_hover_content">
+                                    <a href="#"><h4>Jahanara Vila</h4></a>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+                                    <a class="view_btn" href="#">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_item design plumbing tiling">
+                        <img src="{% static 'customer/img/project/project-6.jpg' %}" alt="">
+                        <img src="{% static 'customer/img/project/project-6.jpg' %}" alt="">
+                        <div class="project_hover">
+                            <div class="project_hover_inner">
+                                <div class="project_hover_content">
+                                    <a href="#"><h4>Jahanara Vila</h4></a>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+                                    <a class="view_btn" href="#">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Our Project Area =================-->
+
+
+<!--================End Work Area =================-->
+</html>
+{% endblock %}

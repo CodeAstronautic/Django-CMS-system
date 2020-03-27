@@ -1,0 +1,38 @@
+{% extends 'Tap_admin/base.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% include 'Tap_admin/heading.html' %}
+<section id="main-content">
+    <section class="wrapper">
+        
+      <div class="row">
+          <div class=" col-md-10">
+        <h2>Enquiry Data</h2>
+  
+            <table class="table table-striped">
+              <thead>
+                <tr style="background-color:#4ECDC4;">
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Phone no</th>
+                  <th scope="col">Address</th>
+                    </tr>
+                {% for obj in enquiry %}
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">{{ obj.first_name }}</th>
+                  <td>{{ obj.last_name }}</td>
+                  <td>{{ obj.email }}</td>
+                  <td>{{ obj.phone_no }}</td>
+                  
+                <td>{{ obj.addres}} </td>
+                 </tr
+                {% endfor %}
+            </tbody>
+            </table>
+        </center>
+{% endblock %}

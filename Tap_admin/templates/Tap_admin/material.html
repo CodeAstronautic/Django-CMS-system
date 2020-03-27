@@ -1,0 +1,82 @@
+{% extends 'Tap_admin/base.html' %}
+{% load static %}
+{% block content %}
+{% include 'Tap_admin/heading.html' %}
+
+<style>
+table {
+  
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Material Details</h2>
+<div class="col-sm-3 col-md-9 "> 
+</div>
+           
+    <a href="{% url 'add_material'  pk=obj.pk%}">
+    <button class="btn btn-primary btn-lg"> +Add New Material </button>
+</a>
+              
+    <a href="{% url 'add_material_type'  pk=obj.pk%}">
+    <button class="btn btn-primary btn-lg"> +Add  Material Type </button>
+</a>
+
+</div>
+
+<table>
+  
+            <tr style="background-color:#4ECDC4;color:black;">
+              <th scope="col">Total Cost</th>
+              <th scope="col">Purchased Date</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Company Name</th>
+              <th scope="col">Bought By</th>
+              
+            </tr>
+         
+          <tbody>
+  {% for i in data %}
+  <tr>
+
+    <td scope="row">&#8377 {{ i.cost}}</td>
+    <td>{{ i.purchased_date}}</td>
+    <td>{{ i.quantity}}</td>
+    <td>{{ i.company_name}}</td>
+    <td>{{ i.user}}</td>
+  </tr>
+ 
+  
+  
+
+  </tr>
+  {% endfor %}
+
+
+</table>
+
+
+
+
+</tbody>
+
+<br>
+<span style="color:red";>
+  <strong>
+Total :&#8377 {{total.cost__sum}}
+</span>
+</strong>
+{% endblock %}

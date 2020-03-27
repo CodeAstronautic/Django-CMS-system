@@ -1,0 +1,40 @@
+{% extends 'Tap_admin/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<section id="main-content">
+  <section class="wrapper">
+      
+    <div class="row">
+      <h2><center>Ongoing Project</center></h2>
+
+          <table class="table table-striped">
+            <thead>
+              <tr style="background-color:#4ECDC4;color:black;">
+                <th scope="col">Project Type</th>
+                <th scope="col">Project Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Sqfeet</th>
+                <th scope="col">Details</th>
+                <th scope="col">Delete</th>
+                
+              </tr>
+              {% for obj in data %}
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{{ obj.project_type }}</th>
+                <td>{{ obj.project_name }}</td>
+                <td>{{ obj.address }}</td>
+                <td>{{ obj.sqfeet }}</td>
+                <td><a href="{% url 'details' obj.pk %}"> View Details</a></td>
+              <td><a href="{% url 'delete_project' obj.pk %}"> Delete</a></td>
+             
+            
+              </tr>
+              {% endfor %}
+          </tbody>
+          </table>
+          {% endblock %}

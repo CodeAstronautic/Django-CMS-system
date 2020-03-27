@@ -1,0 +1,494 @@
+
+
+/* Our Project area css
+============================================================================================ */
+.our_project_area{
+    padding: 65px 0px;
+}
+.project_left_side{
+    position: relative;
+    min-height: 550px;
+    .main_w_title{
+        padding-top: 22px;
+    }
+    .our_project_filter{
+        position: absolute;
+        right: 25px;
+        bottom: 0px;
+        text-align: right;
+        li{
+            margin-bottom: 10px;
+            
+            }    
+        }
+    }
+}
+.our_project_details{
+    .project_item{
+        width: calc(100% / 3);
+        float: left;
+        overflow: hidden;
+        position: relative;
+        .project_hover{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            text-align: center;
+            padding: 18px;
+            .project_hover_inner{
+                height: 100%;
+                border: 2px solid rgba(255, 205, 0, .80);
+                position: relative;
+                .project_hover_content{
+                    background: transparent;
+                    padding: 0px 40px 0px 40px;
+                    @include transition;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0px;
+                    width: 100%;
+                    text-align: center;
+                    overflow: hidden;
+                    h4{
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        font-family: $mon;
+                        font-weight: bold;
+                        color: $dw;
+                        opacity: 0;
+                        -webkit-transform: translateY(1.5rem);
+                        -ms-transform: translateY(1.5rem);
+                        transform: translateY(1.5rem);
+                        transition: all 600ms ease;
+                    }
+                    p{
+                        font-size: 12px;
+                        color: $dip;
+                        font-family: $mon;
+                        line-height: 22px;
+                        padding: 15px 0px 25px 0px;
+                        opacity: 0;
+                        -webkit-transform: translateY(1.5rem);
+                        -ms-transform: translateY(1.5rem);
+                        transform: translateY(1.5rem);
+                        transition: all 1s ease;
+                    }
+                    .view_btn{
+                        text-transform: uppercase;
+                        opacity: 0;
+                        -webkit-transform: translateY(1.5rem);
+                        -ms-transform: translateY(1.5rem);
+                        transform: translateY(1.5rem);
+                        transition: all 1.4s ease;
+                    }    
+                }
+            }
+        }
+        &:hover{
+            .project_hover{
+                .project_hover_inner{
+                    background: rgba(255, 205, 0, .80);
+                    h4{
+                        opacity: 1;
+                        -webkit-transform: translateY(0);
+                        -ms-transform: translateY(0);
+                        transform: translateY(0);
+                    }
+                    p{
+                        opacity: 1;
+                        -webkit-transform: translateY(0);
+                        -ms-transform: translateY(0);
+                        transform: translateY(0);
+                    }
+                    .view_btn{
+                        opacity: 1;
+                        -webkit-transform: translateY(0);
+                        -ms-transform: translateY(0);
+                        transform: translateY(0);
+                    }    
+                }
+            }    
+        }
+    }
+}
+.project_item{
+    position: relative;
+    .project_hover{
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        text-align: center;
+        padding: 18px;
+        .project_hover_inner{
+            height: 100%;
+            border: 2px solid rgba(255, 205, 0, .80);
+            position: relative;
+            .project_hover_content{
+                background: transparent;
+                padding: 0px 40px 0px 40px;
+                @include transition;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0px;
+                width: 100%;
+                text-align: center;
+                overflow: hidden;
+                h4{
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    font-family: $mon;
+                    font-weight: bold;
+                    color: $dw;
+                    opacity: 0;
+                    -webkit-transform: translateY(1.5rem);
+                    -ms-transform: translateY(1.5rem);
+                    transform: translateY(1.5rem);
+                    transition: all 600ms ease;
+                }
+                p{
+                    font-size: 12px;
+                    color: $dip;
+                    font-family: $mon;
+                    line-height: 22px;
+                    padding: 15px 0px 25px 0px;
+                    opacity: 0;
+                    -webkit-transform: translateY(1.5rem);
+                    -ms-transform: translateY(1.5rem);
+                    transform: translateY(1.5rem);
+                    transition: all 1s ease;
+                }
+                .view_btn{
+                    text-transform: uppercase;
+                    opacity: 0;
+                    -webkit-transform: translateY(1.5rem);
+                    -ms-transform: translateY(1.5rem);
+                    transform: translateY(1.5rem);
+                    transition: all 1.4s ease;
+                }    
+            }
+        }
+    }
+    &:hover{
+        .project_hover{
+            .project_hover_inner{
+                background: rgba(255, 205, 0, .80);
+                h4{
+                    opacity: 1;
+                    -webkit-transform: translateY(0);
+                    -ms-transform: translateY(0);
+                    transform: translateY(0);
+                }
+                p{
+                    opacity: 1;
+                    -webkit-transform: translateY(0);
+                    -ms-transform: translateY(0);
+                    transform: translateY(0);
+                }
+                .view_btn{
+                    opacity: 1;
+                    -webkit-transform: translateY(0);
+                    -ms-transform: translateY(0);
+                    transform: translateY(0);
+                }    
+            }
+        }    
+    }
+}
+
+/* End Our Project area css
+============================================================================================ */
+
+/* Work area css
+============================================================================================ */
+.work_area{
+    background: url(../img/work-bg.jpg) no-repeat scroll center center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    padding: 100px 0px 60px 0px;
+    &:before{
+        content: "";
+        background: rgba(0, 0, 0, .5);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .work_content{
+        max-width: 920px;
+        margin: auto;
+        text-align: center;
+        p{
+            font-size: 18px;
+            line-height: 26px;
+            font-family: $open;
+            color: $dw;
+            padding: 25px 0px 60px 0px;
+        }
+    }
+}
+/* End Work area css
+============================================================================================ */
+
+/* Feature Content area css
+============================================================================================ */
+.feature_content{
+    background: #f5f5f5;
+    padding: 100px 0px;
+}
+.f_content_item{
+    text-align: center;
+    i{
+        font-size: 60px;
+        color: $dip;
+    }
+    h4{
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $dip;
+        font-family: $mon;
+        font-weight: bold;
+        padding: 25px 0px 15px 0px;
+        @include transition;
+    }
+    p{
+        font-size: 15px;
+        line-height: 26px;
+        color: $pfont;
+        font-family: $open;
+    }
+    &:hover{
+        h4{
+            color: $baseColor;
+        }
+    }
+}
+
+/* End Feature Content area css
+============================================================================================ */
+
+/* Our Project2 area css
+============================================================================================ */
+.our_project2_area{
+    padding: 100px 0px 65px 0px;
+    .main_c_b_title{
+        padding-bottom: 40px;
+    }
+    .our_project_filter{
+        margin-bottom: 30px;
+        overflow: hidden;
+        text-align: center;
+        max-width: 657px;
+        margin: 0px auto 30px;
+        li{
+            float: left;
+            a{
+                font-family: $open;
+                font-size: 17px;
+                color: $pfont;
+                padding: 0px 18px;
+                line-height: 45px;
+                display: block;
+                border-radius: 0px;
+                border-bottom: 1px solid $dip;
+                border-top: 1px solid #fff;
+                border-left: 1px solid #fff;
+                border-right: 1px solid #fff;
+            }
+            &:last-child{
+                a{
+                    
+                }
+            }
+            &.active{
+                a{
+                    border-top: 1px solid $dip;
+                    border-left: 1px solid $dip;
+                    border-right: 1px solid $dip;
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+    }
+    .our_project_details{
+        margin-bottom: -30px;
+        overflow: hidden;
+        .col-md-4{
+            margin-bottom: 30px;
+        }
+        .project_item{
+            width: 100%;
+			img{
+				width: 100%;
+			}
+            .project_hover{
+                .project_hover_inner{
+                    padding: 0px 40px 0px 40px;
+                }
+            }
+        }
+    }
+    &.all_project{
+        .our_project_filter{
+            margin: 0 auto 50px;
+        }
+        .our_project_details{
+            margin-bottom: 0px;
+            .col-md-6{
+                padding: 0px;
+            }
+            .project_item{
+                .project_hover{
+                    .project_hover_inner{
+                        .project_hover_content{
+                            padding: 0px 80px 0px 80px;
+                            h4{
+                                font-size: 25px;
+                                font-family: $pt;
+                            }
+                            p{
+                                font-size: 18px;
+                                color: #444444;
+                                line-height: 26px;
+                                padding: 25px 0px 45px 0px;
+                            }
+                            .view_btn{
+                                font-size: 20px;
+                                font-family: $open;
+                                padding: 0px 35px;
+                                line-height: 50px;
+                            }
+                        }
+                    }
+                }    
+            }    
+        }    
+    }
+    &.our_project_three_column{
+        .our_project_filter{
+            margin: 0 auto 50px;
+        }
+        .our_project_details{
+            margin-bottom: 0px;
+            .col-md-4{
+                padding: 0px;
+                margin: 0px;
+            }
+            .project_item{
+                .project_hover{
+                    .project_hover_inner{
+                        .project_hover_content{
+                            padding: 0px 30px 0px 30px;
+                        }
+                    }
+                }    
+            }    
+        }    
+    }
+    &.project_grid_two{
+        .our_project_filter{
+            margin: 0 auto 50px;
+        }
+        .our_project_details{
+            margin-bottom: -30px;
+            .project_item{
+                margin-bottom: 30px;
+                .project_hover{
+                    .project_hover_inner{
+                        .project_hover_content{
+                            h4{
+                                font-size: 25px;
+                                font-family: $pt;
+                            }
+                            p{
+                                font-size: 18px;
+                                color: #444444;
+                                line-height: 26px;
+                            }
+                            .view_btn{
+                                background: #1e2126;
+                                line-height: 42px;
+                                padding: 0px 23px;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }    
+            }    
+        }    
+    }
+    &.project_grid_three{
+        .our_project_filter{
+            margin: 0 auto 50px;
+        }
+        .our_project_details{
+            .project_item{
+                .project_hover{
+                    .project_hover_inner{
+                        .project_hover_content{
+                            padding: 0px 30px;
+                            p{
+                                font-size: 14px;
+                            }
+                            .view_btn{
+                                background: #1e2126;
+                                line-height: 32px;
+                                padding: 0px 17.5px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }    
+            }    
+        }
+    }
+}
+/* End Our Project2 area css
+============================================================================================ */
+
+/* End Our Project2 area css
+============================================================================================ */
+.our_latest_project{
+    background: #f7f7f7;
+    padding: 60px 0px;
+    .out_title{
+        padding-bottom: 40px;
+    }
+}
+.our_latest_slider{
+    .owl-prev, .owl-next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 25px;
+        color: $pfont;
+        height: 45px;
+        width: 30px;
+        border: 1px solid $dip;
+        text-align: center;
+        line-height: 39px;
+        @include transition;
+        cursor: pointer;
+        &:hover{
+            background: $baseColor;
+            border-color: $baseColor;
+            color: #fff;
+        }
+    }
+    .owl-prev{
+        left: 0px;
+    }
+    .owl-next{
+        right: 0px;
+    }
+}
+/* End Our Project2 area css
+============================================================================================ */
