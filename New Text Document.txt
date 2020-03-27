@@ -1,0 +1,2 @@
+git push -u upstream master
+git push -f -u origin master
