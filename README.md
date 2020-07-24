@@ -1,2 +1,2 @@
-# Django-Smart-Construction-Plus
+# Django-CMS system
 
